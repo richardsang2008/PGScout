@@ -55,6 +55,7 @@ class Scout(POGOAccount):
 
     def run(self):
         self.log_info("Waiting for job...")
+        time.sleep(35)
         while True:
             (prio, t, job) = self.job_queue.get()
             try:

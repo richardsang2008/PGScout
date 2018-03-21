@@ -325,6 +325,7 @@ cfg_init()
 scouts = load_accounts(jobs)
 for scout in scouts:
     t = Thread(target=scout.run)
+
     t.daemon = True
     t.start()
 
